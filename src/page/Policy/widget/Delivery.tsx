@@ -2,7 +2,7 @@ import { memo } from "react";
 
 const Delivery = () => {
     return (
-        <div className="policy__delivery mb-12">
+        <div className="policy__delivery mb-12 mt-[60px]">
             <h1 className="policy__title font-semibold text-center">
                 Chính sách giao hàng
             </h1>

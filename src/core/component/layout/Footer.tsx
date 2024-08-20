@@ -32,9 +32,10 @@ const Footer = () => {
 
     // [] CONTACT 
     const lstContact = [
-        { id: 1, title: '⚛️ Địa chỉ: đường số 10 khu đô thị sala', url: '' },
-        { id: 2, title: '📞 Điện thoại: 0356916854', url: '' },
-        { id: 3, title: '📧 Email: infor.viemall@gmail.com', url: '' },
+        { id: 1, title: '⚛️ Địa chỉ: 63-65 đường số 10, Phường An Lợi Đông, Quận 2, Thành Phố Thủ Đức, Thành Phố Hồ Chí Minh', url: '' },
+        { id: 2, title: '📞Tổng đài hỗ trợ: 0356916854', url: '' },
+        { id: 3, title: '📧 Email: info.viemall@gmail.com', url: '' },
+        { id: 4, title: '✎ Mã số doanh nghiệp: 0318160848 do sở kế hoạch và đầu tư TP.Hồ Chí Minh cấp lần đầu ngày 13/11/2023', url: '' },
     ]
 
     // RECOIL 
@@ -49,8 +50,10 @@ const Footer = () => {
         setDataLocalStorage("typePolicy", url);
         updateUrlParamsAndNavigate(ROUTER?.POLICY, { type: url });
     }
+
+
     return (
-        <div className={_path === ROUTER?.ORDER_SUCCESS ? 'hidden' : "bg-[#f5ebde] p-[10px] !w-full"}>
+        <div className={_path === ROUTER?.ORDER_SUCCESS ? 'hidden' : `bg-[#f5ebde] p-[10px] !w-full ${_path === ROUTER?.CONTACT ? 'absolute bottom-0' : ''}`}>
             <div className="flex flex-row items-start justify-around m-[10px]">
                 <div className="footer__information">
                     <div

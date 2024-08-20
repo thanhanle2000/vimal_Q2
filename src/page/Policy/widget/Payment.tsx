@@ -9,11 +9,11 @@ const Payment = () => {
             <p>
                 <br />
                 Hình thức thanh toán Hình thức mua hàng và thanh toán tại hệ thống
-                https://www.vimall.vn/#/ được thực hiện như sau:
+                https://www.incamall.vn/#/ được thực hiện như sau:
                 <br />
                 <br />
                 <b>
-                    1. Hình thức thanh toán khi mua hàng tại https://www.vimall.vn/#/.
+                    1. Hình thức thanh toán khi mua hàng tại https://www.incamall.vn/#/.
                     Phương thức Giao hàng – Trả tiền mặt
                 </b>{" "}
                 <br />

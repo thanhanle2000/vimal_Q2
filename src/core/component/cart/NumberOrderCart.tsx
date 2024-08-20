@@ -32,7 +32,7 @@ const NumberOrderCart = () => {
         <div onClick={() => navigate(ROUTER?.CART)} className={_path === ROUTER?.ORDER_SUCCESS ? 'hidden' : "fixed right-0 top-1/2 transform -translate-y-1/2 flex items-center bg-[#ff4820] p-[10px] rounded-l-[16px] cursor-pointer"}>
             <div className="absolute top-[-12px] right-[2px] bg-red-600 text-white w-[18px] h-[18px]
                 rounded-full flex items-center justify-center !text-[10px]">
-                {numberOrder}
+                {numberOrder ?? 0}
             </div>
             <div className="text-white w-[20px]">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor">

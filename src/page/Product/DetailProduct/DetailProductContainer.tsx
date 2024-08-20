@@ -43,10 +43,13 @@ const DetailProductContainer: React.FC = () => {
             };
 
             // GET CART
-            const cart = getDataLocalStorage('cart');
+            let cart = getDataLocalStorage('cart') || [];
+
+            // Ensure cart is an array
+            if (!Array.isArray(cart)) cart = [];
 
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            const existingProductIndex = cart.findIndex((item: any) => item.id === product.id);
+            const existingProductIndex = cart?.findIndex((item: any) => item?.id === product?.id);
 
             if (existingProductIndex > -1) cart[existingProductIndex].quantity += quantity;
             else cart.push(product);
@@ -54,14 +57,16 @@ const DetailProductContainer: React.FC = () => {
             setDataLocalStorage('cart', cart);
             setStatusOrder((prev: boolean) => !prev);
             toast.success("Thêm vào giỏ hàng thành công.");
+        } else {
+            console.log("Lỗi thêm sản phẩm");
         }
     };
 
+
+    // HANDLE QUANTITY CHANGE
     const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = Number(e.target.value);
-        if (value >= 1) {
-            setQuantity(value);
-        }
+        if (value >= 1) setQuantity(value);
     };
 
     return (

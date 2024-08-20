@@ -2,20 +2,24 @@ import { memo, useEffect, useState } from 'react';
 import { useRecoilState } from 'recoil';
 import img_delete from "../../../assets/images/delete.png";
 import { setOrderCart } from '../../../core/services/recoil/recoil';
-import { getDataLocalStorage, setDataLocalStorage } from '../../../core/ultils/ultils';
+import { clearDataFromLocal, getDataLocalStorage, setDataLocalStorage } from '../../../core/ultils/ultils';
+import Loading from '../../../core/component/loading/loading';
 
 const CartListOrder: React.FC = () => {
     // STATE
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [cartData, setCartData] = useState<any[]>([]);
+    const [showConfirm, setShowConfirm] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     // RECOIL
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [_, setStatusOrder] = useRecoilState(setOrderCart);
 
     useEffect(() => {
+        setLoading(true);
         setCartData(getDataLocalStorage('cart'));
-    }, []);
+        setLoading(false);
+    }, [_]);
 
     // HANDLE QUANTITY CHANGE
     const handleQuantityChange = (id: number, newQuantity: number) => {
@@ -29,7 +33,7 @@ const CartListOrder: React.FC = () => {
 
     // HANDLE REMOVE ITEM
     const handleRemoveItem = (id: number) => {
-        const updatedCart = cartData.filter(item => item.id !== id);
+        const updatedCart = cartData?.filter(item => item.id !== id);
         setCartData(updatedCart);
         setStatusOrder(prev => !prev);
         setDataLocalStorage('cart', updatedCart);
@@ -37,38 +41,77 @@ const CartListOrder: React.FC = () => {
 
     const calculateTotalPrice = (data: { id: number; price: string; quantity: number }[]) => {
         // Helper function to parse price
-        const parsePrice = (price: string): number => {
-            // Remove commas and convert to number
-            return parseFloat(price.replace(/\./g, ''));
-        };
+        const parsePrice = (price: string): number => parseFloat(price?.replace(/\./g, ''));
 
         // Calculate total price
-        return data.reduce((total, item) => {
-            const itemPrice = parsePrice(item.price);
-            return total + (itemPrice * item.quantity);
+        return data?.reduce((total, item) => {
+            return total + (parsePrice(item?.price) * item?.quantity);
         }, 0);
     };
 
     // TOTAL PRICE
     const totalPrice = calculateTotalPrice(cartData);
 
+    // HANDLE CONFIRM
+    const handleConfirm = () => {
+        clearDataFromLocal('cart');
+        setStatusOrder(prev => !prev);
+        setShowConfirm(false);
+    };
+
     return (
         <div className="bg-white rounded-lg shadow-lg w-full max-w-md mx-auto mt-10">
+            <Loading isLoading={loading} />
             <div className='p-[10px]'>
-                <h1 className="text-[16px] font-semibold mb-3 text-gray-800 text-left">Giỏ hàng</h1>
+                <div
+                    className="flex flex-row justify-between py-[3px] cursor-pointer my-[5px]"
+                    onClick={() => setShowConfirm(true)}
+                >
+                    <h1 className="text-[16px] font-semibold mb-3 text-gray-800 text-left">Giỏ hàng</h1>
+                    <span className='flex flex-row items-center text-[13px] border border-red-600 text-red-600 font-medium rounded px-[10px]'>
+                        <img
+                            className='w-[15px] h-[15px] cursor-pointer'
+                            title='Xóa tất cả sản phẩm'
+                            src={img_delete}
+                            alt="Delete"
+                        /> Tất cả
+                    </span>
+                </div>
+                {showConfirm && (
+                    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                        <div className="bg-white p-6 rounded-md shadow-lg">
+                            <h2 className="text-lg font-semibold mb-4">Xác nhận</h2>
+                            <p className="mb-4">Bạn có chắc chắn muốn xóa giỏ hàng?</p>
+                            <div className="flex justify-end gap-4">
+                                <button
+                                    className="bg-red-600 text-white px-4 py-1 rounded hover:bg-red-700"
+                                    onClick={() => setShowConfirm(false)}
+                                >
+                                    Hủy
+                                </button>
+                                <button
+                                    className="bg-green-600 text-white px-4 py-1 rounded hover:bg-green-700"
+                                    onClick={handleConfirm}
+                                >
+                                    Xác nhận
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                )}
                 <div className='overflow-auto h-[400px]'>
-                    {cartData.map(item => {
+                    {cartData?.map(item => {
                         // TOTAL PRICE
-                        const totalPrice = (item.price * item.quantity) * 1000;
+                        const totalPrice = (item?.price * item?.quantity) * 1000;
 
                         return (
-                            <div key={item.id}
+                            <div key={item?.id}
                                 className='mb-[10px] flex flex-row items-start justify-start border border-gray-300 p-[10px] rounded-[10px]'>
-                                <img src={item.image} className='rounded-[10px] w-[100px] h-[100px]' alt={item.name} />
+                                <img src={item?.image} className='rounded-[10px] w-[100px] h-[100px]' alt={item?.name} />
                                 <div className='flex flex-col ml-[15px] justify-start items-start gap-[10px]'>
                                     <div className='flex flex-row items-start gap-[20px] justify-between'>
                                         <span className='text-left text-[14px]'>
-                                            {item.name}
+                                            {item?.name}
                                         </span>
                                         <img
                                             className='w-[15px] h-[15px] cursor-pointer'
@@ -89,11 +132,11 @@ const CartListOrder: React.FC = () => {
                                             />
                                             <span className='mx-[5px]'>x</span>
                                             <span className='text-[14px] font-medium'>
-                                                {item.price} VNĐ
+                                                {item?.price} VNĐ
                                             </span>
                                         </div>
                                         <span className='font-medium ml-[10px] text-green-600 text-[16px]'>
-                                            {totalPrice.toLocaleString()} VNĐ
+                                            {totalPrice?.toLocaleString()} VNĐ
                                         </span>
                                     </div>
                                 </div>

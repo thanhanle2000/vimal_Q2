@@ -18,21 +18,23 @@ function App() {
 
   return (
     <Router>
-      <NavBar />
-      <div className='mx-[10%]'>
-        <Routes>
-          <Route path={ROUTER?.HOME} element={<HomeContainer />} />
-          <Route path={ROUTER?.PRODUCT} element={<ProductContainer />} />
-          <Route path={ROUTER?.DETAIL_PRODUCT} element={<DetailProductContainer />} />
-          <Route path={ROUTER?.CONTACT} element={<ContactContainer />} />
-          <Route path={ROUTER?.POLICY} element={<PolicyContainer />} />
-          <Route path={ROUTER?.CART} element={<CartConatiner />} />
-          <Route path={ROUTER?.ORDER_SUCCESS} element={<OrderSuccessContainer />} />
-        </Routes>
+      <div className='flex flex-col !justify-between'>
+        <NavBar />
+        <div className='mx-[10%] h-auto'>
+          <Routes>
+            <Route path={ROUTER?.HOME} element={<HomeContainer />} />
+            <Route path={ROUTER?.PRODUCT} element={<ProductContainer />} />
+            <Route path={ROUTER?.DETAIL_PRODUCT} element={<DetailProductContainer />} />
+            <Route path={ROUTER?.CONTACT} element={<ContactContainer />} />
+            <Route path={ROUTER?.POLICY} element={<PolicyContainer />} />
+            <Route path={ROUTER?.CART} element={<CartConatiner />} />
+            <Route path={ROUTER?.ORDER_SUCCESS} element={<OrderSuccessContainer />} />
+          </Routes>
+        </div>
+        <Footer />
+        <NumberOrderCart />
+        <ScrollToTop />
       </div>
-      <Footer />
-      <NumberOrderCart />
-      <ScrollToTop />
     </Router>
 
   )

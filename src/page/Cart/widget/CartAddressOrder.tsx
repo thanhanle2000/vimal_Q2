@@ -2,6 +2,7 @@ import { memo, useState } from 'react'
 import Loading from '../../../core/component/loading/loading';
 import { useNavigate } from 'react-router-dom';
 import { ROUTER } from '../../../core/constant/router';
+import { toast } from 'react-toastify';
 
 type FormValues = {
     name: string;
@@ -22,11 +23,23 @@ const CartAddressOrder: React.FC = () => {
     });
     const [errors, setErrors] = useState<Partial<FormValues>>({});
     const [loading, setLoading] = useState(false);
+    const [agreePolicies, setAgreePolicies] = useState(false);
+    const [agreePayment, setAgreePayment] = useState(false);
 
     // HANDLE CHANGE
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormValues({ ...formValues, [name]: value });
+    };
+
+    // HANDLE CHECK BOX CHANGE
+    const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, checked } = e.target;
+        if (name === 'agreePolicies') {
+            setAgreePolicies(checked);
+        } else if (name === 'agreePayment') {
+            setAgreePayment(checked);
+        }
     };
 
     // VALIDATE
@@ -42,9 +55,12 @@ const CartAddressOrder: React.FC = () => {
     // HANDLE SUBMIT
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        if (validate()) {
+        if (validate() && agreePolicies && agreePayment) {
             setLoading(true)
             setTimeout(() => { navigate(ROUTER?.ORDER_SUCCESS) }, 300);
+        } else {
+            if (!agreePolicies) toast.warning("Bạn cần đồng ý với các chính sách và quy định mua hàng.");
+            if (!agreePayment) toast.warning("Bạn cần đồng ý với phương thức thanh toán.");
         }
     };
 
@@ -120,8 +136,9 @@ const CartAddressOrder: React.FC = () => {
                         type="checkbox"
                         id="agreePolicies"
                         name="agreePolicies"
-                        checked={true}
-                        className=" text-indigo-600 border-gray-300 rounded"
+                        checked={agreePolicies}
+                        onChange={handleCheckboxChange}
+                        className="text-indigo-600 border-gray-300 rounded"
                     />
                     <span className='text-[13px] ml-[5px]'>
                         Tôi đồng ý với các chính sách và quy định mua hàng tại website
@@ -132,8 +149,9 @@ const CartAddressOrder: React.FC = () => {
                         type="checkbox"
                         id="agreePayment"
                         name="agreePayment"
-                        checked={true}
-                        className=" text-indigo-600 border-gray-300 rounded"
+                        checked={agreePayment}
+                        onChange={handleCheckboxChange}
+                        className="text-indigo-600 border-gray-300 rounded"
                     />
                     <span className='text-[13px] ml-[5px]'>
                         Tôi đồng ý với phương thức thanh toán sau khi nhận hàng tại nhà
@@ -149,6 +167,5 @@ const CartAddressOrder: React.FC = () => {
         </div>
     );
 };
-
 
 export default memo(CartAddressOrder)
