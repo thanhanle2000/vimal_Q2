@@ -82,7 +82,7 @@ const DetailProductContainer: React.FC = () => {
                             alt="Picture of the author"
                         />
                         <div className="flex flex-col justify-start items-start">
-                            <div className="product-item__name font-semibold">
+                            <div className="product-item__name font-semibold text-left">
                                 {data?.name}
                             </div>
                             <div className="flex flex-row items-center">

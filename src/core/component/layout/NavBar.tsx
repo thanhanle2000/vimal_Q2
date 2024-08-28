@@ -47,7 +47,7 @@ const NavBar = () => {
             <div className="container mx-auto flex flex-wrap items-center justify-between">
                 <a onClick={() => navigate(ROUTER?.HOME)} className="flex cursor-pointer" style={{ width: 50 }}>
                     <img src={logo} alt="Logo" />
-                    <span className="self-center font-semibold whitespace-nowrap text-[14px] text-white">VIMALL</span>
+                    <span className="self-center font-semibold whitespace-nowrap text-[14px] text-white">INCAMALL</span>
                 </a>
                 <div className="flex md:order-2">
                     <button

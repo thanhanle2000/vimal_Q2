@@ -12,20 +12,11 @@ const Footer = () => {
     const location = useLocation();
     const _path = location?.pathname;
 
-    // [] INFO 
-    const lstInfo = [
-        { id: 1, title: 'Giới thiệu', url: '' },
-        { id: 2, title: 'Dịch vụ', url: '' },
-        { id: 3, title: 'Thanh toán', url: '' },
-        { id: 4, title: 'Liên hệ', url: '' },
-        { id: 5, title: 'Câu hỏi thường gặp', url: '' },
-    ]
-
     // [] SERVICES 
     const lstServices = [
-        { id: 1, title: 'Chính sách bảo mật công ty', url: '/policy-security' },
+        { id: 1, title: 'Chính sách bảo mật', url: '/policy-security' },
         { id: 2, title: 'Hướng dẫn mua hàng', url: '/policy-guide' },
-        { id: 3, title: 'Chính sách giao nhận', url: '/policy-delivery' },
+        { id: 3, title: 'Chính sách giao hàng', url: '/policy-delivery' },
         { id: 4, title: 'Chính sách thanh toán', url: '/policy-payment' },
         { id: 5, title: 'Chính sách bảo hành và đổi trả', url: '/policy-return-product' },
     ]
@@ -36,6 +27,7 @@ const Footer = () => {
         { id: 2, title: '📞Tổng đài hỗ trợ: 0356916854', url: '' },
         { id: 3, title: '📧 Email: info.viemall@gmail.com', url: '' },
         { id: 4, title: '✎ Mã số doanh nghiệp: 0318160848 do sở kế hoạch và đầu tư TP.Hồ Chí Minh cấp lần đầu ngày 13/11/2023', url: '' },
+        { id: 5, title: 'Giám đốc: Phạm Quốc Thịnh', url: '' },
     ]
 
     // RECOIL 
@@ -74,15 +66,6 @@ const Footer = () => {
                     <div className="footer__information__logo"></div>
                 </div>
                 <div className="flex flex-col items-start">
-                    <h3 className="footer__policy--title footer--title font-medium text-[20px]">Giới thiệu
-                    </h3>
-                    <ul className="footer__policy__list flex items-start flex-col mt-[20px] gap-2">
-                        {lstInfo?.map(item =>
-                            <Link key={item?.id} href={item?.url}>{item?.title}</Link>
-                        )}
-                    </ul>
-                </div>
-                <div className="flex flex-col items-start">
                     <h3 className="footer__policy--title footer--title font-medium text-[20px]">Chính sách</h3>
                     <ul className="footer__policy__list flex items-start flex-col mt-[20px] gap-2">
                         {lstServices?.map(item =>
@@ -91,7 +74,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="flex flex-col items-start">
-                    <h3 className="footer__policy--title footer--title font-medium text-[20px]">Mạng xã hội</h3>
+                    <h3 className="footer__policy--title footer--title font-medium text-[20px]">CÔNG TY TNHH INCA GROUP</h3>
                     <ul className="footer__policy__list flex items-start flex-col mt-[20px] gap-2">
                         {
                             lstContact?.map(item =>

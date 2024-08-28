@@ -1,5 +1,5 @@
 import 'flowbite'
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import '../src/core/css/App.css'
 import NumberOrderCart from './core/component/cart/NumberOrderCart'
 import Footer from './core/component/layout/Footer'
@@ -15,9 +15,8 @@ import DetailProductContainer from './page/Product/DetailProduct/DetailProductCo
 import ProductContainer from './page/Product/ProductContainer'
 
 function App() {
-
   return (
-    <Router>
+    <HashRouter>
       <div className='flex flex-col !justify-between'>
         <NavBar />
         <div className='mx-[10%] h-auto'>
@@ -35,8 +34,7 @@ function App() {
         <NumberOrderCart />
         <ScrollToTop />
       </div>
-    </Router>
-
+    </HashRouter>
   )
 }
 

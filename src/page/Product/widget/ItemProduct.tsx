@@ -2,10 +2,14 @@
 
 import { Card, CardBody, CardHeader, Image, Link } from "@nextui-org/react";
 import { useRecoilState } from "recoil";
-import img0 from "../../../assets/images/p0.jpg";
-import img1 from "../../../assets/images/p1.jpg";
-import img2 from "../../../assets/images/p2.jpg";
-import img3 from "../../../assets/images/p3.jpg";
+import pro_01 from "../../../assets/images/pro_01.jpg";
+import pro_02 from "../../../assets/images/pro_02.jpg";
+import pro_03 from "../../../assets/images/pro_03.jpg";
+import pro_04 from "../../../assets/images/pro_04.jpg";
+import pro_05 from "../../../assets/images/pro_05.jpg";
+import pro_06 from "../../../assets/images/pro_06.jpg";
+import pro_07 from "../../../assets/images/pro_07.jpg";
+import pro_08 from "../../../assets/images/pro_08.jpg";
 import { ROUTER } from "../../../core/constant/router";
 import { setDetailProduct } from "../../../core/services/recoil/recoil";
 import { setDataLocalStorage, useUpdateUrlParams } from "../../../core/ultils/ultils";
@@ -14,111 +18,248 @@ import { setDataLocalStorage, useUpdateUrlParams } from "../../../core/ultils/ul
 export const listProduct = [
     {
         id: 0,
-        image: img0,
-        name: "[SIÊU TO] Chân gà ớt xanh Trùng Khánh cay nồng 260g",
-        price: "75.000",
+        image: pro_01,
+        name: "Nồi lẩu nướng hấp đa năng Bear 4 lít-DHG-C40w2",
+        price: "799.000",
         herf: "product-item",
-        desc: `😋😋😋Bạn là tín đồ của những món ăn cay nồng, ưa thích khám phá ẩm thực đường phố Trùng Khánh? Hãy thử ngay Chân Gà Ớt Xanh Trùng Khánh - "siêu phẩm" cay tê dành cho giới trẻ đam mê thử thách! 😋😋😋
-        🤏🏻Vị cay tê bùng nổ: Tẩm ướp gia vị bí truyền Trùng Khánh, ớt xanh cay nồng "đánh thức" mọi giác quan, thỏa mãn đam mê cay của bạn.🤏🏻
-        🔥Chân gà giòn sần sật: Chân gà được tuyển chọn kỹ lưỡng, giòn sần sật, thấm đẫm gia vị cay tê, ăn đến đâu là "đã" đến đó.🔥
-        ❤️Hương vị đậm đà: Sự kết hợp hoàn hảo giữa vị cay nồng của ớt, vị mặn ngọt của gia vị, tạo nên hương vị đậm đà khó cưỡng.❤️
+        desc: `
+            Nồi Lẩu Nướng BEAR, Bếp Lẩu Đa Năng 4L- 3in1 gồm :1 nồi ăn lẩu+1 khay nướng+1 vỉ hấp
+            THÔNG SỐ KĨ THUẬT
+            - Thương hiệu Bear
+            - Trọng lượng 3kg
+            - Hạn bảo hành 12 tháng
+            - Chất liệu Nhôm tĩnh điện, Tráng, Nhiều lớp
+            - Điện áp đầu vào 220V
+            - Dung tích 4L
+            - Kích thước : 450mm x 250mm x 88
 
-        🔥🔥🔥 Hãy thử ngay CHÂN GÀ ỚT XANH TRÙNG KHÁNH và cảm nhận sự bùng nổ hương vị!🔥🔥🔥
-
-        Bảo quản: để nơi thoáng mát, tránh ánh nắng
-
-        NSX: in trên bao bì sản phẩm
-
-        HSD: 9 tháng kể từ ngày sản xuất
-
-        Xuất xứ: Trùng Khánh
-
-        🛒 Đặt hàng ngay hôm nay để nhận được ưu đãi đặc biệt!
-        #doanvat #doanvattrungquoc #noidiatrung #changa #changaotxanh #anvattrungkhanh #vimall`,
+            ƯU ĐIỂM của nồi lẩu nướng đa năng DHG-C40W2
+            - Nhiều phụ kiện đi kèm: Ngoài nồi lẩu dung tích 4L. Bear còn trang bị cho sản phẩm này đến 2 phụ kiện rời gồm khay hấp 3,5L và khay chiên nướng. Bạn có thể chế biến hàng trăm món ăn khác nhau chỉ với 1 chiếc nồi duy nhất, từ nấu lẩu, hầm, nướng, chiên, kho...
+            - Thanh gạt 4 mức nhiệt: giúp bạn dễ kiểm soát nhiệt độ bữa ăn, tránh được tình trạng quá nhiệt hoặc không đủ độ nóng.
+            - Hai lỗ thoát hơi nước: Vì sử dụng nhiệt lượng cao của hơi nước để làm chín thức ăn nên thiết kế này giúp thoát hơi nước nhanh, tránh để hơi nước đọng lại và ngấm ngược lại vào thực phẩm. Nhờ vào đó, mọi món ăn của bạn đều thơm ngon trọn vị.
+            - Nắp kinh trong suốt: Đảm bảo bạn luôn kiểm soát được quá trình nấu ăn của mình.
+            - Quai nồi chống trượt và cách nhiệt: giúp bạn cầm chắc nồi, tránh bị trượt tay, gây bỏng trong quá trình nấu nướng.
+            `
     },
     {
         id: 1,
-        image: img1,
-        name: "Xiên dê nướng tẩm vị Hồ Nam siêu cay - Hàng nội địa Trung",
+        image: pro_02,
+        name: "Chảo chống dính BDO đá y tế dùng chiên rán tiện dụng",
         herf: "product-item1",
-        price: "34.000",
-        desc: `🔥🔥🔥XIÊN DÊ NƯỚNG SIÊU CAY HỒ NAM - HƯƠNG VỊ ĐỈNH CAO CHO TÍN ĐỒ ĂN CAY🔥🔥🔥
+        price: "329.000",
+        desc: `Bộ Nồi Chảo Chống Dính Nhật Bàn Vân Đá Cao Cấp, Chất Liệu Chống Dính, Dùng Mọi Loại Bếp, Chiên Xào Nấu Đa Năng Tiện Lợi
 
-🌶️ Bạn là tín đồ của đồ ăn cay? Bạn muốn thử một món ăn vặt đậm chất Trung Quốc? Vậy thì còn chần chừ gì mà không dùng thử Xiên Dê Nướng Siêu Cay Hồ Nam - món ăn vặt đang làm mưa làm gió trong giới trẻ yêu thích ẩm thực cay nồng xứ Trung!
-😋Hương vị bùng nổ: Cay nồng, thơm ngon, hấp dẫn – mỗi miếng xiên dê là một cuộc phiêu lưu vị giác đầy kích thích.
-👍Chất lượng tuyệt vời: Sản phẩm nhập khẩu chính ngạch từ Trung Quốc, cam kết chất lượng và độ an toàn vệ sinh thực phẩm.
-🔆 Tiện dụng: Hoàn hảo cho những lúc bận rộn, cần một bữa ăn nhẹ nhanh chóng mà vẫn ngon miệng.
+THÔNG TIN SẢN PHẨM 
+- Đường kính: nồi ( Size):  22cm 
+                       chảo (size): 26cm 
+- Lõi alumium A3003 phủ lớp vân đá chống dính cao cấp
+ - Cán nồi/chảo:  cao cấp giả gỗ
+ - Đáy từ: Có
+ - Nắp:Nồi kèm nắp thủy tinh - Chảo không có nắp
+- Đặc điểm khác: Có vân đá 
+- Màu sắc: màu kem 
+- Thích hợp cho: Bếp ga, bếp từ, bếp điện, bếp hồng ngoại
+- Màu trắng kem siêu pastel xinh yêu vô cùng, phù hợp nấu các loại bếp.
 
-🔥🔥🔥 Hãy thử ngay XIÊN DÊ NƯỚNG SIÊU CAY HỒ NAM và cảm nhận sự bùng nổ hương vị!🔥🔥🔥
-
-Bảo quản: để nơi thoáng mát, tránh ánh nắng
-
-NSX: in trên bao bì sản phẩm
-
-HSD: 9 tháng kể từ ngày sản xuất
-
-Xuất xứ: Hồ Nam
-
-🛒 Đặt hàng ngay hôm nay để nhận được ưu đãi đặc biệt!
-#doanvat #doanvattrungquoc #noidiatrung #xiencay #sieucay #xiendecay #xiendenuong #vimall`,
+ƯU ĐIỂM SẢN PHẨM: 
+- Bộ nồi chảo chống dính vân đá được thiết kế kiểu nhật với màu kem sang trọng, cao cấp
+ - Lòng nồi chảo chống dính, có vân đá giúp cho bạn có thể hạn chế dầu mỡ khi chiên, rán đồ ăn. 
+- Đáy nồi chảo chống dính được làm từ hợp kim nhôm vô cùng bền bỉ, dẫn nhiệt nhanh hơn giúp bạn có thể tiết kiệm gas và điện khi sử dụng.
+ - Nồi Chảo chống dính có đáy từ 4 lớp sử dụng được cho mọi loại bếp : Bếp ga, bếp từ, bếp điện, bếp hồng ngoại 
+ - Cán nồi chảo chống dính làm bằng nhựa cao cấp gỗ rất nhẹ giúp bạn thoải mái khi cầm, cách nhiệt rất tốt nên không lo bị nóng cán chảo khi sử dùng lâu, ngoài ra còn có quai treo ở cuối cán chảo giúp bạn có thể treo chảo trong nhà bếp của bạn giúp nhà bếp của bạn luôn gọn gàng.
+- Dùng để nấu cho bé ăn dặm hoặc nấu ít đồ ăn 
+- Chất liệu nhôm cao cấp giúp toả nhiệt đều , nóng nhanh hơn`,
     },
     {
         id: 2,
         herf: "product-item2",
-        image: img2,
-        name: "Bò nướng siêu cay rớt nước mắt Trùng Khánh loại 22g",
-        price: "15.000",
+        image: pro_03,
+        name: "Bộ Nồi Chảo Nhật Bản Chống Dính Vân Đá, Bảo Hành 6 Tháng, Dùng Mọi Loại Bếp, Chiên Xào Nấu Đa Năng",
+        price: "329.000",
+        desc: `Bộ Nồi Chảo Chống Dính Nhật Bàn Vân Đá Cao Cấp, Chất Liệu Chống Dính, Dùng Mọi Loại Bếp, Chiên Xào Nấu Đa Năng Tiện Lợi
+
+THÔNG TIN SẢN PHẨM 
+- Đường kính: nồi ( Size):  22cm 
+                       chảo (size): 26cm 
+- Lõi alumium A3003 phủ lớp vân đá chống dính cao cấp
+ - Cán nồi/chảo:  cao cấp giả gỗ
+ - Đáy từ: Có
+ - Nắp:Nồi kèm nắp thủy tinh - Chảo không có nắp
+- Đặc điểm khác: Có vân đá 
+- Màu sắc: màu kem 
+- Thích hợp cho: Bếp ga, bếp từ, bếp điện, bếp hồng ngoại
+- Màu trắng kem siêu pastel xinh yêu vô cùng, phù hợp nấu các loại bếp.
+
+ƯU ĐIỂM SẢN PHẨM: 
+- Bộ nồi chảo chống dính vân đá được thiết kế kiểu nhật với màu kem sang trọng, cao cấp
+ - Lòng nồi chảo chống dính, có vân đá giúp cho bạn có thể hạn chế dầu mỡ khi chiên, rán đồ ăn. 
+- Đáy nồi chảo chống dính được làm từ hợp kim nhôm vô cùng bền bỉ, dẫn nhiệt nhanh hơn giúp bạn có thể tiết kiệm gas và điện khi sử dụng.
+ - Nồi Chảo chống dính có đáy từ 4 lớp sử dụng được cho mọi loại bếp : Bếp ga, bếp từ, bếp điện, bếp hồng ngoại 
+ - Cán nồi chảo chống dính làm bằng nhựa cao cấp gỗ rất nhẹ giúp bạn thoải mái khi cầm, cách nhiệt rất tốt nên không lo bị nóng cán chảo khi sử dùng lâu, ngoài ra còn có quai treo ở cuối cán chảo giúp bạn có thể treo chảo trong nhà bếp của bạn giúp nhà bếp của bạn luôn gọn gàng.
+- Dùng để nấu cho bé ăn dặm hoặc nấu ít đồ ăn 
+- Chất liệu nhôm cao cấp giúp toả nhiệt đều , nóng nhanh hơn`
     },
     {
         id: 3,
-        image: img2,
+        image: pro_04,
         herf: "product-item3",
-        name: "Bò nướng siêu cay rớt nước mắt Trùng Khánh loại 22g",
-        price: "15.000",
-        desc: `🔥🔥🔥Bạn là tín đồ của ẩm thực chay thanh đạm nhưng vẫn muốn "bung nổ" vị giác với những món ăn cay nồng? Hãy thử ngay Que Chay Sốt Cay - "siêu phẩm" mới cho giới trẻ yêu thích hương vị cay tê, mặn ngọt!🔥🔥🔥
+        name: "Bộ bát đĩa chén đĩa Bát Tràng cao cấp , full compo 22 chi tiết , hoa văn hoạ tiết trắng viền đẹp tráng men cap cấp",
+        price: "299.000",
+        desc: `Set gồm:
+                10 bát ăn cơm
+                2 đĩa muối
+                2 bát chấm
+                3 đĩa tròn 18cm
+                2 đĩa tròn 20cm
+                1 tô nhỡ 16cm
+                1 tô to 18cm
+                1 bộ đũa khảm vàng 10 đôi
+                BỘ SẢN PHẨM BÁT ĐĨA TRẮNG CAO CẤP lấy cảm hứng từ phong cách cổ điển đậm chất Á Đông. 
 
-⚡️Vị cay nồng bùng nổ: Tẩm ướp gia vị độc đáo, ớt cay nồng "đánh thức" mọi giác quan, thỏa mãn đam mê cay của bạn.
-💥Que chay giòn rụm: Que chay được làm từ nguyên liệu chay tự nhiên, giòn rụm, thấm đẫm sốt cay nồng, ăn đến đâu là "đã" đến đó.
-💋Hương vị đậm đà: Sự kết hợp hoàn hảo giữa vị cay nồng của ớt, vị mặn ngọt của gia vị, tạo nên hương vị đậm đà khó cưỡng.
+                Chất liệu gốm sứ tráng men cao cấp, không chứa chì, không độc hại, thân thiện với môi trường, mẫu trắng trơn cổ điển, phù hợp với hầu hết các gia đình hiện nay, dễ dàng mua thêm mà không cần thay mới cả bộ bát đĩa đang có. 
 
-🔥🔥🔥 Hãy thử ngay QUE CHAY SỐT CAY và cảm nhận sự bùng nổ hương vị!🔥🔥🔥
-
-Bảo quản: để nơi thoáng mát, tránh ánh nắng
-
-NSX: in trên bao bì sản phẩm
-
-HSD: 6 tháng kể từ ngày sản xuất
-
-Xuất xứ: Hồ Nam
-
-🛒 Đặt hàng ngay hôm nay để nhận được ưu đãi đặc biệt!
-#doanvat #doanvattrungquoc #noidiatrung #quechay #quechaysotcay #anvathonam #vimall`,
+                Sản phẩm sử dụng an toàn với lò vi sóng, lò nướng, máy rửa bát
+            `,
     },
     {
         id: 4,
-        image: img3,
+        image: pro_05,
         herf: "product-item4",
-        name: "Que đậu cay Hồ Nam- phiên bản promax- cay tê tái",
-        price: "20.000",
-        desc: `🔥🔥🔥VÁNG ĐẬU CAY PROMAX- BÙNG NỔ VỊ GIÁC, THỎA MÃN ĐAM MÊ 🔥🔥🔥 
+        name: "Bộ Bát Đĩa Gosu Họa Tiết Bộ Đồ Ăn Phong Cách Bắc Âu,Sử Dụng Được Cho Lò Vi Sóng Và Máy Rửa Bát",
+        price: "651.000",
+        desc: `Đối với mỗi sản phẩm, Gốm sứ Gosu luôn lựa thật kỹ càng để mang đến cho khách hàng những sản phẩm không những đẹp mà còn an toàn cho sức khoẻ. Chúng mình đã chọn ra bộ sản phẩm cơ bản nhất mà một gia đình nhỏ ở Việt Nam thường sẽ dùng đến. Hãy ghé qua ngắm nghía và chọn thêm những sản phẩm phù hợp với nhu cầu của mình nhất nhé.
 
-🌶️Váng đậu cay Promax - món ăn vặt quốc dân giờ đây đã có phiên bản "nâng cấp" với độ cay bùng nổ, chinh phục mọi giác quan của bạn! 
-😋Vị cay nồng đỉnh cao: Kết hợp hoàn hảo giữa vị cay nồng của ớt, vị mặn ngọt hài hòa, cùng hương thơm nồng nàn kích thích vị giác.
-🤏🏽Giòn tan, đậm đà: Váng đậu được chiên giòn rụm, tan ngay trong miệng, để lại dư vị cay dai khó cưỡng.
 
-🔥🔥🔥 Hãy thử ngay VÁNG ĐẬU CAY PROMAX và cảm nhận sự bùng nổ hương vị!🔥🔥🔥
 
-Bảo quản: để nơi thoáng mát, tránh ánh nắng
+                Hàng dễ vỡ nên chúng mình đã cố gắng bọc gói cẩn thận. Nếu nhận được hàng bị vỡ, bốc máy gọi thẳng đến số Hotline hoặc inbox shop để được đổi trả hoàn toàn miễn phí ngay và luôn nha. 
 
-NSX: in trên bao bì sản phẩm
 
-HSD: 4 tháng kể từ ngày sản xuất
 
-Xuất xứ: Hồ Nam
+                🍁 GIỚI THIỆU
 
-🛒 Đặt hàng ngay hôm nay để nhận được ưu đãi đặc biệt!
-#doanvat #doanvattrungquoc #noidiatrung #quecay #sieucay #vangdaucay #vimall`,
+                BỘ SẢN PHẨM CHÉN ĐĨA HỌA TIẾT DỄ THƯƠNG lấy cảm hứng từ phong cách hiện đại, trẻ trung phương Tây, được sản xuất và cung cấp từ phương Đông =)). Chất liệu gốm sứ tráng men cao cấp, không chứa chì, không độc hại, thân thiện với môi trường, kiểu dáng đa dạng, họa tiết sắc nét, màu sắc phù hợp với những gia đình yêu thích sự cổ điển, tinh tế. Sản phẩm sử dụng an toàn với lò vi sóng, lò nướng, máy rửa bát.
+
+                -----------------------------------
+
+                THÔNG TIN SẢN PHẨM
+
+                Set hộp quà:
+
+                Bát con : 6c
+
+                Bát chấm : 2c
+
+                Tô đại : 1c
+
+                Đĩa tròn 7inch: 2c
+
+                Đĩa tròn 8 inch: 2c`,
     },
+    {
+        id: 5,
+        image: pro_06,
+        herf: "product-item4",
+        name: "Nồi cơm điện 1.2L nắp rời Ladomax HA-7112 nấu nhanh lòng nhôm phủ men chống dính",
+        price: "363.000",
+        desc: `✪ THÔNG TIN SẢN PHẨM 
+
+
+
+Tên sản phẩm: NỒI CƠM ĐIỆN (NẮP RỜI )
+
+Thương hiệu: LADOMAX
+
+Dung tích: 1.2 Lít
+
+Model: HA-7112
+
+Điện áp: 220V - 50Hz
+
+Công suất: 500W
+
+Bộ phận nhựa: Nhựa PP cao cấp, an toàn, chống nóng
+
+Lòng nồi: Lòng nhôm, phủ men chống dính cao cấp
+
+Mô tả chung: Điều khiển cơ,đèn led hiển thị, chế độ nấu 
+
+và giữ ấm, nắp và thân nồi inox.
+
+Phụ kiện: Muôi xới cơm, Cốc đong
+
+Dây nguồn: 1.2 met, rời
+
+Màu sắc: Tím, Vàng, Inox
+
+Kích Thước: 240x240x235(mm)
+
+Trọng lượng: 1.9Kg
+`
+    },
+    {
+        id: 6,
+        image: pro_07,
+        herf: "product-item4",
+        name: "Đá y tế Chảo chống dính bếp từ Chảo rán đặc biệt Họa tiết đá Chảo chống dính 28cm",
+        price: "215.000",
+        desc: `Chảo đá chống dính Xám 28cm
+- Chảo Chống Dính Này Là Sản Phẩm Mới Nhất Được Cửa Hàng Chúng Tôi Ra mắt Cho Khách Hàng.
+- Sản phẩm được lựa chọn cẩn thận từ thiết kế đến chất lượng để đảm bảo sự hài lòng của khách hàng.
+- Dùng Để Chế Biến Các Món Ăn Đơn Giản Như Chiên, Chiên, Cung Cấp Các Món Ngon Như Bít tết, Phi lê Cá, Tôm...
+- Tay Cầm Bakelite Cách Nhiệt Hạt Gỗ Với Lỗ Treo Kim Loại Sáng Bóng. Nó cho cảm giác mượt mà, chắc chắn và trọng lượng hợp lý.
+- Màu sắc đẹp, tươi sáng và bắt mắt mang đến sự sang trọng cho bạn và toàn bộ không gian bếp.`
+    },
+    {
+        id: 7,
+        image: pro_08,
+        herf: "product-item4",
+        name: "Nồi hấp Gilux 24L đa năng chính hãng, nồi hấp điện 3 tầng tiện lợi bảo hành 12 tháng",
+        price: "599.000",
+        desc: `THÔNG SỐ KỸ THUẬT
+
+            Dung Tích : 24L 
+
+            Điện áp : 220V
+
+            Tần số : 50hz
+
+            Công suất định mức : 800w
+
+
+
+            CÔNG DỤNG
+
+            Nồi hấp Gilux dễ dàng điều chỉnh, lựa chọn cảm ứng nhạy bén. Giúp bạn hấp những món ăn thơm ngon như hải sản, gà, cá hấp, bánh, ngũ cốc, rau củ..
+            ƯU ĐIỂM
+
+            1. Thiết kế trang trọng, tay nghề thủ công tinh tế 
+
+            2. Khay hấp ba tầng. Bạn có thể tự do ghép một hay hai tầng tùy theo nhu cầu của mình.
+
+            3. Có nhiều chức năng hấp phù hợp với nhiều loại sản phẩm 
+
+            4. Tạo hơi nhanh trong 10 giây
+
+            5. Tự ngắt khi hết nước
+
+            6. Bảo quản nhiệt tự động
+
+            7. Giữ nhiệt lên đến 12h
+
+            8. Chức năng hẹn giờ thông minh, thức dậy và thưởng thức món ăn ngon
+
+            9. Hấp giữ nguyên hương vị, bảo vệ dinh dưỡng của thực phẩm. 
+
+
+            HƯỚNG DẪN SỬ DỤNG
+
+            Bước 1: Thêm nước vào máy ở mực nước thấp nhất.
+
+            Bước 2: Cho thực phẩm vào, đậy nắp lồng hấp.
+
+            Bước 3: Khởi động máy theo yêu cầu.`
+    },
+
 ];
 
 const ItemProduct = () => {
