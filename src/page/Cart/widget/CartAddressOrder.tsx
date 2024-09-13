@@ -170,20 +170,7 @@ const CartAddressOrder: React.FC = () => {
             className="text-indigo-600 border-gray-300 rounded"
           />
           <span className="text-[13px] ml-[5px]">
-            Tôi đã đọc và đồng ý với chính sách mua hàng tại website
-          </span>
-        </label>
-        <label className="flex items-center text-gray-700 text-sm font-medium mb-4 cursor-pointer">
-          <input
-            type="checkbox"
-            id="agreePayment"
-            name="agreePayment"
-            checked={agreePayment}
-            onChange={handleCheckboxChange}
-            className="text-indigo-600 border-gray-300 rounded"
-          />
-          <span className="text-[13px] ml-[5px]">
-            Tôi đồng ý với phương thức thanh toán sau khi nhận hàng tại nhà
+            Tôi đã đọc và đồng ý với các chính sách của website.
           </span>
         </label>
         <button

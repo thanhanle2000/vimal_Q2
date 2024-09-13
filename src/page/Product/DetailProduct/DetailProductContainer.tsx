@@ -134,7 +134,7 @@ const DetailProductContainer: React.FC = () => {
                 </div>
                 <div className="flex flex-col text-left pt-[10px] italic text-red-500 font-medium">
                   <span>Chịu trách nhiệm Phân phối bởi: IncaMall</span>
-                  <span>Xuất xứ: Việt Nam/ Nhập khẩu</span>
+                  <span>Xuất xứ: Việt Nam</span>
                 </div>
               </div>
             </div>

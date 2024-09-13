@@ -112,8 +112,8 @@ const Sercurity = () => {
           </li>
           <li>
             Không sử dụng, không chuyển giao, cung cấp hay tiết lộ cho bên thứ 3
-            nào về thông tin cá nhân của thành viên khi không có sự cho phép
-            đồng ý từ thành viên.
+            nào về thông tin cá nhân của thành viên ngoại trừ cơ quan Pháp luật
+            Việt Nam yêu cầu.
           </li>
           <li>
             Trong trường hợp máy chủ lưu trữ thông tin bị hacker tấn công dẫn
